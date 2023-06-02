@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Coventry Web-Crawler-Paper Search</title>
+
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .coventry-img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container d-flex align-items-center justify-content-center flex-column"
+    >
+      <img
+        src="{{ url_for('static', filename='coventry.png') }}"
+        alt="Coventry Logo"
+        class="coventry-img"
+      />
+      <h1 class="mt-5">Coventry Search Portal</h1>
+
+      <form action="/search" method="POST" class="my-4 w-75">
+        <div class="input-group">
+          <input
+            type="text"
+            class="form-control"
+            name="query"
+            placeholder="Search using Author, Title or Tags"
+          />
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <footer class="footer fixed-bottom bg-dark text-muted py-2">
+      <div class="container text-center">
+        <span>&copy; Nikesh Sapkota</span>
+      </div>
+    </footer>
+  </body>
+</html>
